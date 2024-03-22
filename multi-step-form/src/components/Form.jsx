@@ -15,7 +15,7 @@ const Form = () => {
         planId: 1,
         isMonthly: true,
         isYearly: false,
-        isOnlineServide: false,
+        isOnlineService: false,
         largerStorage: false,
         customizableProfile: false,
     });

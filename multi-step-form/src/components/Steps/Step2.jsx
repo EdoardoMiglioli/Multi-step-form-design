@@ -1,6 +1,6 @@
 import React from 'react';
-import PlanSelection from '../StepsComponents/PlanSection';
-import SwitchSection from '../StepsComponents/SwitchSection';
+import PlanSelection from '../StepsComponents/Step2/PlanSection';
+import SwitchSection from '../StepsComponents/Step2/SwitchSection';
 
 function Step2({ formData, handleChange, onNext, onPrev }) {
   const { name, email } = formData;

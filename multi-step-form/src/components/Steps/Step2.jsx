@@ -1,4 +1,6 @@
 import React from 'react';
+import PlanSelection from '../StepsComponents/PlanSection';
+import SwitchSection from '../StepsComponents/SwitchSection';
 
 function Step2({ formData, handleChange, onNext, onPrev }) {
   const { name, email } = formData;
@@ -27,22 +29,10 @@ function Step2({ formData, handleChange, onNext, onPrev }) {
 
   return (
     <div className="step step-2">
-      <h2>Step 2</h2>
-      <label>
-        Name:
-        <input
-            value={name}
-            onChange={handleChange}
-        />
-      </label>
-
-      <label>
-        Email:
-        <input
-            value={email}
-            onChange={handleChange}
-        />
-      </label>
+      <h2 className="title">Select your plan</h2>
+      <p className="subtitle">You have the option of mothly or yearly billing.</p>
+      <PlanSelection />
+      <SwitchSection />
 
       <button onClick={handlePrev}>Go back</button>
       <button onClick={handleNext}>Next</button>

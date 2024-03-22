@@ -16,12 +16,15 @@ function Step1({ formData, handleChange, onNext }) {
 
   return (
     <div className="step step-1">
-      <h2>Step 1</h2>
+      <h2 className="title">Personal info</h2>
+      <p className="subtitle">Please provide your name, email address and phone number</p>
       <label>
         Name:
         <input
+            className="text-input"
             value={name}
             onChange={handleChange}
+            placeholder="e.g. Stephen King"
             type="text"
             name="name"
         />
@@ -30,8 +33,10 @@ function Step1({ formData, handleChange, onNext }) {
       <label>
         Email address:
         <input
+            className="text-input"
             value={email}
             onChange={handleChange}
+            placeholder="e.g. stephenking@"
             type="text"
             name="email"
         />
@@ -40,8 +45,10 @@ function Step1({ formData, handleChange, onNext }) {
       <label>
         Phone number:
         <input
+            className="text-input"
             value={phone}
             onChange={handleChange}
+            placeholder="e.g. +1 234 567 890"
             type="text"
             name="email"
         />

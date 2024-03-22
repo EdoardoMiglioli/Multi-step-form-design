@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Step1({ formData, handleChange, onNext }) {
-  const { name, email } = formData;
+  const { name, email, phone } = formData;
 
   const handleNext = (e) => {
     e.preventDefault();
@@ -22,14 +22,28 @@ function Step1({ formData, handleChange, onNext }) {
         <input
             value={name}
             onChange={handleChange}
+            type="text"
+            name="name"
         />
       </label>
 
       <label>
-        Email:
+        Email address:
         <input
             value={email}
             onChange={handleChange}
+            type="text"
+            name="email"
+        />
+      </label>
+
+      <label>
+        Phone number:
+        <input
+            value={phone}
+            onChange={handleChange}
+            type="text"
+            name="email"
         />
       </label>
 

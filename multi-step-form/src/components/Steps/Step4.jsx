@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Step4({ formData, handleChange, onNext }) {
+function Step4({ formData, handleChange, onPrev }) {
   const { name, email } = formData;
 
-  const handleNext = (e) => {
+  const handlePrev = (e) => {
     e.preventDefault();
     // Add validation logic here
     // For example:
@@ -11,12 +11,12 @@ function Step4({ formData, handleChange, onNext }) {
     //   // Display error message
     //   return;
     // }
-    onNext();
+    onPrev();
   };
 
   return (
     <div className="step step-4">
-      <h2>Step 1</h2>
+      <h2>Step 4</h2>
       <label>
         Name:
         <input
@@ -33,7 +33,7 @@ function Step4({ formData, handleChange, onNext }) {
         />
       </label>
 
-      <button onClick={handleNext}>Next</button>
+      <button onClick={handlePrev}>Go back</button>
     </div>
   );
 }

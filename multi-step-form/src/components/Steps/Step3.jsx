@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Step3({ formData, handleChange, onNext }) {
+function Step3({ formData, handleChange, onNext, onPrev }) {
   const { name, email } = formData;
 
   const handleNext = (e) => {
@@ -14,9 +14,20 @@ function Step3({ formData, handleChange, onNext }) {
     onNext();
   };
 
+  const handlePrev = (e) => {
+    e.preventDefault();
+    // Add validation logic here
+    // For example:
+    // if (!name || !email) {
+    //   // Display error message
+    //   return;
+    // }
+    onPrev();
+  };
+
   return (
     <div className="step step-3">
-      <h2>Step 1</h2>
+      <h2>Step 3</h2>
       <label>
         Name:
         <input
@@ -33,6 +44,7 @@ function Step3({ formData, handleChange, onNext }) {
         />
       </label>
 
+      <button onClick={handlePrev}>Go back</button>
       <button onClick={handleNext}>Next</button>
     </div>
   );

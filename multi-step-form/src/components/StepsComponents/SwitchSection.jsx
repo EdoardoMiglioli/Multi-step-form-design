@@ -9,10 +9,14 @@ const SwitchSection = () => {
     };
   
     return (
-        <label class="switch">
-            <input type="checkbox" />
-            <span class="slider round"></span>
-        </label>
+        <div className="switch-section-container">
+            <p className="switch-section-text">Monthly</p>
+            <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+            </label>
+            <p className="switch-section-text">Yearly</p>
+        </div>
     );
 };
 

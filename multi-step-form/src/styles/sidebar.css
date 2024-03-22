@@ -1,0 +1,7 @@
+.sidebar {
+    height: 70vh;
+    border-radius: 10px;
+    background-image: url('../../public/assets/images/bg-sidebar-desktop.svg');
+    background-size: cover;
+}
+

@@ -4,6 +4,7 @@ button:hover {
 
 .next-button, .back-button {
     font-family: var(--font-family);
+    font-size: 15px;
 }
 
 .next-button {
@@ -14,9 +15,23 @@ button:hover {
     color: #fff;
     background-color: var(--next-button-color);
     border-radius: 10px;
-    font-size: 15px;
 }
 
 .next-button:hover {
     background-color: var(--hover-button-color);
+}
+
+.back-button {
+    width: auto;
+    padding: 0;
+    color: var(--back-button-color);
+    background-color: transparent;
+}
+
+.back-button:hover {
+    color: var(--hover-back-button-color);
+}
+
+.buttons-container {
+    display: flex;
 }

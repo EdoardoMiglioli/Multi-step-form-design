@@ -11,9 +11,9 @@ const SwitchSection = () => {
     return (
         <div className="switch-section-container">
             <p className="switch-section-text">Monthly</p>
-            <label class="switch">
+            <label className="switch">
                 <input type="checkbox" />
-                <span class="slider round"></span>
+                <span className="slider round"></span>
             </label>
             <p className="switch-section-text">Yearly</p>
         </div>

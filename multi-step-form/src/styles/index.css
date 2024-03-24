@@ -1,28 +1,10 @@
-@font-face {
-    font-family: 'Ubuntu';
-    src: url('../../public/assets/fonts/Ubuntu-Bold.ttf') format('ttf');
-    font-weight: bolder; 
-}
-
-@font-face {
-    font-family: 'Ubuntu';
-    src: url('../../public/assets/fonts/Ubuntu-Medium.ttf') format('ttf');
-    font-weight: normal; 
-}
-
-@font-face {
-    font-family: 'Ubuntu';
-    src: url('../../public/assets/fonts/Ubuntu-Regular.ttf') format('ttf');
-    font-weight: lighter; 
-}
-
 :root {
     --primary-color: #473FFF;
     --secondary-color: #F9818D;
     --tertiary-color: #FFAF7E;
     --title-color: #032C5C;
     --subtitle-color: #35455F;
-    --text-color: #2C3F5C;
+    --text-color: #365481;
     --secondary-text-color: #ADADB4;
     --error-text-color: #E3576D;
 
@@ -36,9 +18,9 @@
     --error-input-color: #A7676F;
 
     --font-family: "Ubuntu", sans-serif;
-    --bolder-font: "bolder";
-    --medium-font: "normal";
-    --light-font: "lighter";
+    --bold-font: 700;
+    --medium-font: 500;
+    --light-font: 400;
 }
 
 
@@ -67,3 +49,6 @@ body {
     border-radius: 10px;
     background: #fff;
 }
+
+/* removing standard stylings */
+

@@ -16,43 +16,48 @@ function Step1({ formData, handleChange, onNext }) {
 
   return (
     <div className="step step-1">
-      <h2 className="title">Personal info</h2>
-      <p className="subtitle">Please provide your name, email address and phone number</p>
-      <label>
-        Name:
-        <input
-            className="text-input"
-            value={name}
-            onChange={handleChange}
-            placeholder="e.g. Stephen King"
-            type="text"
-            name="name"
-        />
-      </label>
+      <div className="header">
+        <h2 className="title">Personal info</h2>
+        <p className="subtitle">Please provide your name, email address and phone number</p>
+      </div>
 
-      <label>
-        Email address:
-        <input
-            className="text-input"
-            value={email}
-            onChange={handleChange}
-            placeholder="e.g. stephenking@"
-            type="text"
-            name="email"
-        />
-      </label>
-
-      <label>
-        Phone number:
-        <input
+      <div className="inputs-container">
+        <div className="input-container">
+          <label className="input-label">Name</label>
+          <input
+              className="text-input"
+              value={name}
+              onChange={handleChange}
+              placeholder="e.g. Stephen King"
+              type="text"
+              name="name"
+          />
+        </div>
+  
+        <div className="input-container">
+          <label className="input-label">Email address</label>
+          <input
+              className="text-input"
+              value={email}
+              onChange={handleChange}
+              placeholder="e.g. stephenking@"
+              type="text"
+              name="email"
+          />
+        </div>
+        
+        <div className="input-container">
+          <label className="input-label">Phone number</label>
+          <input
             className="text-input"
             value={phone}
             onChange={handleChange}
             placeholder="e.g. +1 234 567 890"
             type="text"
             name="email"
-        />
-      </label>
+          />
+        </div>
+      </div>
 
       <button onClick={handleNext}>Next</button>
     </div>

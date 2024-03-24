@@ -58,6 +58,9 @@
   font-weight: var(--medium-font);
 }
 
+.text-input:focus {
+  border-color: var(--active-input-color); 
+}
 
 
 /* Step 2 */

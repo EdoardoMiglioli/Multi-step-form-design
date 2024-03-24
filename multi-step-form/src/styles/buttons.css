@@ -1,0 +1,22 @@
+button:hover {
+    cursor: pointer;
+}
+
+.next-button, .back-button {
+    font-family: var(--font-family);
+}
+
+.next-button {
+    margin-top: auto;
+    margin-left: auto;
+    width: 120px;
+    height: 50px;
+    color: #fff;
+    background-color: var(--next-button-color);
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.next-button:hover {
+    background-color: var(--hover-button-color);
+}

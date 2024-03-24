@@ -8,7 +8,7 @@
     --secondary-text-color: #ADADB4;
     --error-text-color: #E3576D;
 
-    --button-color: #04295A;
+    --next-button-color: #04295A;
     --back-button-color: #ACADB7;
     --selected-step-color: #BEE3FF;
 
@@ -52,3 +52,10 @@ body {
 
 /* removing standard stylings */
 
+input:focus {
+    outline: none;
+}
+
+button {
+    border: none;
+}

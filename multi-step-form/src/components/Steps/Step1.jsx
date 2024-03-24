@@ -1,4 +1,5 @@
 import React from 'react';
+import NextButton from '../Buttons/NextButton';
 
 function Step1({ formData, handleChange, onNext }) {
   const { name, email, phone } = formData;
@@ -59,7 +60,7 @@ function Step1({ formData, handleChange, onNext }) {
         </div>
       </div>
 
-      <button onClick={handleNext}>Next</button>
+      <NextButton handleNext={handleNext} />
     </div>
   );
 }

@@ -1,21 +1,20 @@
-// SwitchSection.js
 import React, { useState } from 'react';
 
-const SwitchSection = () => {
-    const [isChecked, setIsChecked] = useState(false);
+const SwitchSection = ({ isMonthly, chengeIsMonthly }) => {
+    const [isChecked, setIsChecked] = useState(isMonthly);
 
     const handleChange = () => {
-      setIsChecked(!isChecked);
+      setIsChecked(!isMonthly);
     };
   
     return (
         <div className="switch-section-container">
-            <p className="switch-section-text">Monthly</p>
+            <p className={isMonthly ? "selected-switch-section-text" : "switch-section-text" }>Monthly</p>
             <label className="switch">
                 <input type="checkbox" />
                 <span className="slider round"></span>
             </label>
-            <p className="switch-section-text">Yearly</p>
+            <p className={!isMonthly ? "selected-switch-section-text" : "switch-section-text" }>Yearly</p>
         </div>
     );
 };

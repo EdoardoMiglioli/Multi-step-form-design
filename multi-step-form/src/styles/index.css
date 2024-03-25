@@ -1,21 +1,18 @@
 :root {
-    --primary-color: #473FFF;
-    --secondary-color: #F9818D;
-    --tertiary-color: #FFAF7E;
-    --title-color: #032C5C;
-    --subtitle-color: #35455F;
-    --text-color: #365481;
+    --primary-color: hsl(243, 100%, 62%);
+    --title-color: hsl(213, 96%, 18%);
+    --text-color: hsl(213, 96%, 18%);
     --secondary-text-color: hsl(231, 11%, 63%);
+    --border-color: hsl(229, 24%, 87%);
     --error-text-color: hsl(354, 84%, 57%);
 
-    --next-button-color: #04295A;
-    --back-button-color: #ACADB7;
-    --selected-step-color: hsl(206, 94%, 87%);
+    --next-button-color: hsl(213, 96%, 18%);
+    --back-button-color: hsl(231, 11%, 63%);
+    --selected-step-color: hsl(228, 100%, 84%);
 
-    --hover-button-color: #174A8B;
-    --hover-back-button-color: #123760;
-    --active-input-color: #5F5A9C;
-    --error-input-color: #A7676F;
+    --hover-button-color: hsl(213.62, 71.6%, 31.76%);
+    --hover-back-button-color: hsl(213, 96%, 18%);
+    --active-input-color: hsl(243, 100%, 62%);
 
     --font-family: "Ubuntu", sans-serif;
     --bold-font: 700;

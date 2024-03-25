@@ -45,7 +45,7 @@
 }
 
 .text-input {
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 10px;
   font-family: var(--font-family);
@@ -74,7 +74,7 @@
 .plan-card {
   display: grid;
   padding: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   font-family: var(--font-family);
 }
@@ -179,7 +179,7 @@ input:checked + .slider:before {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 14px;
   font-family: var(--font-family);
@@ -203,7 +203,7 @@ input:checked + .slider:before {
 .checkbox-custom {
   width: 20px;
   height: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   position: absolute;
   top: 0;
@@ -289,6 +289,7 @@ input:checked + .slider:before {
 
 .summary-plan-name {
   margin: 0;
+  font-weight: var(--medium-font);
   color: var(--text-color);
 }
 

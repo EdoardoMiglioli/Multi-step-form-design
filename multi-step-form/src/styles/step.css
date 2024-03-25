@@ -299,6 +299,11 @@ input:checked + .slider:before {
   text-decoration: underline;
 }
 
+.summary-plan-change:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
 .summary-plan-price {
   margin: 0;
   color: var(--text-color);

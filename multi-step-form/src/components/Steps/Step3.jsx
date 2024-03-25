@@ -1,5 +1,7 @@
 import React from 'react';
 import AddOnCard from '../StepsComponents/Step3/AddOnCard';
+import NextButton from '../Buttons/NextButton';
+import BackButton from '../Buttons/BackBotton';
 
 function Step3({ formData, handleChange, onNext, onPrev }) {
   const { isMonthly, isYearly } = formData;
@@ -53,19 +55,25 @@ function Step3({ formData, handleChange, onNext, onPrev }) {
 
   return (
     <div className="step step-3">
-      <h2 className="title">Pick add-ons</h2>
-      <p className="subtitle">Add-ons help enhance your gaming experience.</p>
+      <div className="header">
+        <h2 className="title">Pick add-ons</h2>
+        <p className="subtitle">Add-ons help enhance your gaming experience.</p>
+      </div>
 
-      {addOnsArray.map(addOn => <AddOnCard 
-      
-        key={addOn.id} id={addOn.id} 
-        name={addOn.name} description={addOn.description} 
-        price={isMonthly ? addOn.monthlyPrice : addOn.yearlyPrice} 
-
+      <div className="addons-container">
+        {addOnsArray.map(addOn => <AddOnCard 
+        
+          key={addOn.id} id={addOn.id} 
+          name={addOn.name} description={addOn.description} 
+          price={isMonthly ? addOn.monthlyPrice : addOn.yearlyPrice} 
+  
         />)}
+      </div>
 
-      <button onClick={handlePrev}>Go back</button>
-      <button onClick={handleNext}>Next</button>
+      <div className="buttons-container">
+        <BackButton handlePrev={handlePrev} />
+        <NextButton handleNext={handleNext} />
+      </div>
     </div>
   );
 }

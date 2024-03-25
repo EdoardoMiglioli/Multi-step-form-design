@@ -4,12 +4,11 @@
     align-items: center;
 }
 
-
 button:hover {
     cursor: pointer;
 }
 
-.next-button, .back-button {
+.next-button, .back-button, .confirm-button {
     font-family: var(--font-family);
     font-size: 15px;
 }
@@ -25,6 +24,19 @@ button:hover {
 
 .next-button:hover {
     background-color: var(--hover-button-color);
+}
+
+.confirm-button {
+    margin-left: auto;
+    width: 120px;
+    height: 50px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.confirm-button:hover {
+    opacity: 0.6;
 }
 
 .back-button {

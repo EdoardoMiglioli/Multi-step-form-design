@@ -3,7 +3,7 @@ import React from 'react';
 import AddOnSummary from '../StepsComponents/Step4/AddOnSummary';
 import TotalSection from '../StepsComponents/Step4/TotalSection';
 import BackButton from '../Buttons/BackBotton';
-import NextButton from '../Buttons/NextButton';
+import ConfirmButton from '../Buttons/ConfirmButton';
 
 function Step4({ formData, handleChange, onPrev }) {
   const { name, email } = formData;
@@ -46,7 +46,7 @@ function Step4({ formData, handleChange, onPrev }) {
 
       <div className="buttons-container">
         <BackButton handlePrev={handlePrev} />
-        <NextButton />
+        <ConfirmButton />
       </div>
     </div>
   );

@@ -3,5 +3,48 @@
     border-radius: 10px;
     background-image: url('../../public/assets/images/bg-sidebar-desktop.svg');
     background-size: cover;
+    font-family: var(--font-family);
+    color: #fff;
+}
+
+.step-list-element {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.step-list-element-number {
+    display: flex;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    font-weight: var(--medium-font);
+}
+
+.selected-step-list-element-number {
+    background-color: var(--selected-step-color);
+    color: hsl(213, 96%, 18%);
+}
+
+.step-list-element-infos {
+    display: grid;
+    gap: 3px;
+}
+
+.step-list-element-name {
+    font-size: 16px;
+    font-weight: var(--light-font);
+    margin: 0;
+}
+
+.step-list-element-action {
+    margin: 0;
 }
 

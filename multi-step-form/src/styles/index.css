@@ -5,12 +5,12 @@
     --title-color: #032C5C;
     --subtitle-color: #35455F;
     --text-color: #365481;
-    --secondary-text-color: #ADADB4;
-    --error-text-color: #E3576D;
+    --secondary-text-color: hsl(231, 11%, 63%);
+    --error-text-color: hsl(354, 84%, 57%);
 
     --next-button-color: #04295A;
     --back-button-color: #ACADB7;
-    --selected-step-color: #BEE3FF;
+    --selected-step-color: hsl(206, 94%, 87%);
 
     --hover-button-color: #174A8B;
     --hover-back-button-color: #123760;

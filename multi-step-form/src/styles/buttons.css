@@ -1,3 +1,10 @@
+.buttons-container {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+}
+
+
 button:hover {
     cursor: pointer;
 }
@@ -8,7 +15,6 @@ button:hover {
 }
 
 .next-button {
-    margin-top: auto;
     margin-left: auto;
     width: 120px;
     height: 50px;
@@ -30,9 +36,4 @@ button:hover {
 
 .back-button:hover {
     color: var(--hover-back-button-color);
-}
-
-.buttons-container {
-    display: flex;
-    align-items: center;
 }

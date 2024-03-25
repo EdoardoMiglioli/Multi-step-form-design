@@ -1,7 +1,7 @@
 .step {
   display: grid;
   margin: 30px 80px 15px;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto 1fr auto;
   gap: 30px;
 }
 
@@ -257,4 +257,91 @@ input:checked + .slider:before {
 .addon-card-price {
   text-align: right;
   color: var(--active-input-color);
+}
+
+/* Step 4 */
+
+.summary {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  font-family: var(--font-family);
+}
+
+.summary-pricing-container {
+  height: fit-content;
+  background-color: ghostwhite;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.summary-plan {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--secondary-text-color);
+  padding-bottom: 20px;
+}
+
+.summary-plan-name-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-plan-name {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.summary-plan-change {
+  margin: 0;
+  margin-top: 7px;
+  color: var(--secondary-text-color);
+  text-decoration: underline;
+}
+
+.summary-plan-price {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.addons-summary-container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.addon-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addon-summary-name {
+  margin: 0;
+  color: var(--secondary-text-color);
+}
+
+.addon-summary-price {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.total-text {
+  margin: 0;
+  color: var(--secondary-text-color);
+}
+
+.total-price {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 23px;
 }

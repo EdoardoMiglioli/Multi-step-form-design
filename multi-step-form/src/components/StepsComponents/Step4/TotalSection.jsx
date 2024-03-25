@@ -4,8 +4,8 @@ const TotalSection = ({ planPrice, addOnsPrices, isMonthly }) => {
 
     return (
         <div className="total-section">
-            <p>Total()</p>
-            <h2 className="total-price">+${}/mo</h2>
+            <p className="total-text">Total (per month)</p>
+            <h2 className="total-price">+${}10/mo</h2>
         </div>
     );
 }

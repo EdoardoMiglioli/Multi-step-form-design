@@ -24,45 +24,51 @@ function Step1({ formData, handleChange, onNext }) {
       <div className="inputs-container">
         <div className="input-container">
           <div className="input-texts-container">
-            <label className="input-label">Name</label>
+            <label className="input-label" htmlFor="nameInput">Name</label>
             {displayError && !name && <p className="error">This field is required</p>}
           </div>
           <input
-              className={(displayError && !email) ? "error-text-input text-input" : "text-input"}
-              value={name}
-              onChange={handleChange}
-              placeholder="e.g. Stephen King"
-              type="text"
-              name="name"
+            id="nameInput"
+            className={(displayError && !email) ? "error-text-input text-input" : "text-input"}
+            value={name}
+            onChange={handleChange}
+            placeholder="e.g. Stephen King"
+            type="text"
+            autoComplete="name"
+            name="name"
           />
         </div>
   
         <div className="input-container">
-        <div className="input-texts-container">
-            <label className="input-label">Email address</label>
+          <div className="input-texts-container">
+            <label className="input-label" htmlFor="emailInput">Email address</label>
             {displayError && !email && <p className="error">This field is required</p>}
           </div>
           <input
-              className={(displayError && !email) ? "error-text-input text-input" : "text-input"}
-              value={email}
-              onChange={handleChange}
-              placeholder="e.g. stephenking@lorem.com"
-              type="email"
-              name="email"
+            id="emailInput"
+            className={(displayError && !email) ? "error-text-input text-input" : "text-input"}
+            value={email}
+            onChange={handleChange}
+            placeholder="e.g. stephenking@lorem.com"
+            type="email"
+            autoComplete="email"
+            name="email"
           />
         </div>
         
         <div className="input-container">
           <div className="input-texts-container">
-            <label className="input-label">Phone number</label>
+            <label className="input-label" htmlFor="phoneInput">Phone number</label>
             {displayError && !phone && <p className="error">This field is required</p>}
           </div>
           <input
+            id="phoneInput"
             className={(displayError && !email) ? "error-text-input text-input" : "text-input"}
             value={phone}
             onChange={handleChange}
             placeholder="e.g. +1 234 567 890"
-            type="text"
+            type="tel"
+            autoComplete="tel"
             name="phone"
           />
         </div>

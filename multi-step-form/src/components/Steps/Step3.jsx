@@ -37,8 +37,6 @@ function Step3({ formData, handleClick, onNext, onPrev }) {
     }
   ];
 
-  console.log(formData)
-
   const handleNext = (e) => {
     e.preventDefault();
     // Add validation logic here

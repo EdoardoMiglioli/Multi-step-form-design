@@ -38,10 +38,21 @@
   gap: 5px;
 }
 
+.input-texts-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .input-label {
   color: var(--text-color);
   font-size: 15px;
   font-weight: var(--medium-font);
+}
+
+.error {
+  margin: 0;
+  color: var(--error-color);
+  font-weight: var(--bold-font);
 }
 
 .text-input {
@@ -49,6 +60,10 @@
   border-radius: 10px;
   padding: 10px;
   font-family: var(--font-family);
+}
+
+.error-text-input {
+  border-color: var(--error-color);
 }
 
 .text-input::placeholder {

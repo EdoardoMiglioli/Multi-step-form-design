@@ -18,6 +18,39 @@ function Step4({ formData, isMonthly, onPrev }) {
     onPrev();
   };
 
+  const extractPriceFromString = (str) => {
+    const regex = /\$([\d.]+)/;
+
+    const match = str.match(regex);
+
+    const numericalPart = match[1]; 
+    return parseInt(numericalPart, 10); 
+  }
+
+  const calculateFinalBill = (formData, isMonthly) => {
+    let finalBill = 0;
+    const mainPlanPrice = isMonthly ? formData.planMonthlyPrice : formData.planYearlyPrice;
+    finalBill += extractPriceFromString(mainPlanPrice);
+
+    if (formData.onlineService) {
+      const addOnPrice = isMonthly ? 1 : 10;
+      finalBill += addOnPrice;
+    }
+
+    if (formData.largerStorage) {
+      const addOnPrice = isMonthly ? 2 : 20;
+      finalBill += addOnPrice;
+    }
+
+    if (formData.customizableProfile) {
+      const addOnPrice = isMonthly ? 2 : 20;
+      finalBill += addOnPrice;
+    }
+
+
+    return `+$${finalBill}/${isMonthly ? "mo" : "yr"}`;
+  }
+
   return (
     <div className="step step-4">
     <div className="header">
@@ -41,7 +74,7 @@ function Step4({ formData, isMonthly, onPrev }) {
             {formData.customizableProfile && <AddOnSummary name="Customizable Profile" price={isMonthly ? "+$2/mo" : "+$20/yr"} />}
           </div>
         </div>
-          <TotalSection />
+          <TotalSection calculateFinalBill={calculateFinalBill} formData={formData} isMonthly={isMonthly} />
       </div>
 
       <div className="buttons-container">

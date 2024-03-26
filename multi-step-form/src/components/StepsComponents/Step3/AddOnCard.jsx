@@ -11,11 +11,13 @@ const AddOnCard = ({ name, description, formDataKey, price, handleClick }) => {
     }
     return (
         <div className={addonCardClasses} onClick={handleSelection}>
-            <label className="checkbox-container">
+            <label className="checkbox-container" >
                 <input
                     className="checkbox-input" 
                     type="checkbox"
+                    onChange={() => {}}
                     checked={isSelected}
+                    disabled={true}
                 />
                 <span className="checkbox-custom"></span>
             </label>

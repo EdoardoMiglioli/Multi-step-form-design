@@ -18,8 +18,6 @@ function Step4({ formData, onPrev }) {
     onPrev();
   };
 
-  console.log(formData)
-
   return (
     <div className="step step-4">
     <div className="header">
@@ -38,11 +36,12 @@ function Step4({ formData, onPrev }) {
           </div>
   
           <div className="addons-summary-container">
-            <AddOnSummary />
+            {formData.onlineService && <AddOnSummary name="Online service" price="+$1/mo" />}
+            {formData.largerStorage && <AddOnSummary name="Larger storage" price="+$2/mo" />}
+            {formData.customizableProfile && <AddOnSummary name="Customizable Profile" price="+$2/mo" />}
           </div>
         </div>
-        
-        <TotalSection />
+          <TotalSection />
       </div>
 
       <div className="buttons-container">

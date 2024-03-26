@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const AddOnCard = ({ name, description, formDataKey, price, handleClick }) => {
-    const [isSelected, setIsSelected] = useState(false)
+const AddOnCard = ({ name, description, formDataKey, isAddonSelected, price, handleClick }) => {
+    const [isSelected, setIsSelected] = useState(isAddonSelected)
     const addonCardClasses = isSelected ? "selected-addon-card-container addon-card-container" : "addon-card-container";
 
 

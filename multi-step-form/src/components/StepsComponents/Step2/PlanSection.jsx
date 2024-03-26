@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import PlanCard from './PlanCard';
 
-const PlanSelection = ({ handleClick }) => {
-  const [selectedPlan, setSelectedPlan] = useState(null);
+const PlanSelection = ({ plan, handleClick }) => {
+  const [selectedPlan, setSelectedPlan] = useState(plan);
   const handlePlanSelection = (planName, planPrice) => {
     handleClick("plan", planName);
     handleClick("planPrice", planPrice);

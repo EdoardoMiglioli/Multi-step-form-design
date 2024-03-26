@@ -10,6 +10,7 @@ function Step3({ formData, handleClick, onNext, onPrev }) {
       id: 1,
       name: "Online service",
       formDataKey: "onlineService",
+      isSelected: formData.onlineService,
       description: "Access to multiplayer games",
       monthlyPrice: "$1/mo",
       yearlyPrice: "$10/yr",
@@ -19,6 +20,7 @@ function Step3({ formData, handleClick, onNext, onPrev }) {
       id: 2,
       name: "Larger storage",
       formDataKey: "largerStorage",
+      isSelected: formData.largerStorage,
       description: "Extra 1TB of cloud save",
       monthlyPrice: "$2/mo",
       yearlyPrice: "$20/yr",
@@ -28,6 +30,7 @@ function Step3({ formData, handleClick, onNext, onPrev }) {
       id: 3,
       name: "Customizable profile",
       formDataKey: "customizableProfile",
+      isSelected: formData.customizableProfile,
       description: "Custom theme on your profile",
       monthlyPrice: "$2/mo",
       yearlyPrice: "$20/yr",
@@ -68,6 +71,7 @@ function Step3({ formData, handleClick, onNext, onPrev }) {
           key={addOn.id} id={addOn.id} 
           name={addOn.name} description={addOn.description} 
           formDataKey={addOn.formDataKey}
+          isAddonSelected={addOn.isSelected}
           price={isMonthly ? addOn.monthlyPrice : addOn.yearlyPrice} 
           handleClick={handleClick}
         />)}

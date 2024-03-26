@@ -58,7 +58,7 @@ const Form = () => {
     
             {currentStep === 2 && (
               <Step2
-                formData={formData}
+                plan={formData.plan}
                 handleClick={handleClick}
                 onNext={handleNext}
                 onPrev={handlePrev}

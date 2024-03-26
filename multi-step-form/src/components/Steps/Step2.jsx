@@ -36,7 +36,7 @@ function Step2({ plan, isMonthly, onNext, onPrev, toggleIsMonthly, handleClick }
         <p className="subtitle">You have the option of mothly or yearly billing.</p>
       </div>
 
-      <PlanSelection plan={plan} handleClick={handleClick} />
+      <PlanSelection plan={plan} isMonthly={isMonthly} handleClick={handleClick} />
       <SwitchSection isMonthly={isMonthly} toggleIsMonthly={toggleIsMonthly} />
 
       <div className="buttons-container">

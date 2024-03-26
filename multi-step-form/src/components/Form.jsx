@@ -14,7 +14,8 @@ const Form = () => {
         email: "",
         phone: "",
         plan: "",
-        planPrice: null,
+        planMonthlyPrice: null,
+        planYearlyPrice: null,
         isMonthly: isMonthly,
         onlineService: false,
         largerStorage: false,
@@ -90,6 +91,7 @@ const Form = () => {
             {currentStep === 4 && (
               <Step4
                 formData={formData}
+                isMonthly={formData.isMonthly}
                 onPrev={handlePrev}
               />
             )}

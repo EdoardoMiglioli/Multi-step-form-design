@@ -5,7 +5,7 @@ import TotalSection from '../StepsComponents/Step4/TotalSection';
 import BackButton from '../Buttons/BackBotton';
 import ConfirmButton from '../Buttons/ConfirmButton';
 
-function Step4({ formData, onPrev }) {
+function Step4({ formData, isMonthly, onPrev }) {
 
   const handlePrev = (e) => {
     e.preventDefault();
@@ -29,16 +29,16 @@ function Step4({ formData, onPrev }) {
         <div className="summary-pricing-container">
           <div className="summary-plan">
             <div className="summary-plan-name-container">
-              <h4 className="summary-plan-name">{formData.plan} (monthly)</h4>
+              <h4 className="summary-plan-name">{formData.plan} ({isMonthly ? "monthly" : "yearly"})</h4>
               <p className="summary-plan-change">Change</p>
             </div>
-            <h3 className="summary-plan-price">{formData.planPrice}</h3>
+            <h3 className="summary-plan-price">{isMonthly ? formData.planMonthlyPrice : formData.planYearlyPrice}</h3>
           </div>
   
           <div className="addons-summary-container">
-            {formData.onlineService && <AddOnSummary name="Online service" price="+$1/mo" />}
-            {formData.largerStorage && <AddOnSummary name="Larger storage" price="+$2/mo" />}
-            {formData.customizableProfile && <AddOnSummary name="Customizable Profile" price="+$2/mo" />}
+            {formData.onlineService && <AddOnSummary name="Online service" price={isMonthly ? "+$1/mo" : "+$10/yr"} />}
+            {formData.largerStorage && <AddOnSummary name="Larger storage" price={isMonthly ? "+$2/mo" : "+$20/yr"} />}
+            {formData.customizableProfile && <AddOnSummary name="Customizable Profile" price={isMonthly ? "+$2/mo" : "+$20/yr"} />}
           </div>
         </div>
           <TotalSection />

@@ -4,8 +4,7 @@ import SwitchSection from '../StepsComponents/Step2/SwitchSection';
 import NextButton from '../Buttons/NextButton';
 import BackButton from '../Buttons/BackBotton';
 
-function Step2({ formData, handleChange, onNext, onPrev }) {
-  const { name, email } = formData;
+function Step2({ onNext, onPrev, handleClick }) {
 
   const handleNext = (e) => {
     e.preventDefault();
@@ -29,6 +28,7 @@ function Step2({ formData, handleChange, onNext, onPrev }) {
     onPrev();
   };
 
+
   return (
     <div className="step step-2">
       <div className="header">
@@ -36,7 +36,7 @@ function Step2({ formData, handleChange, onNext, onPrev }) {
         <p className="subtitle">You have the option of mothly or yearly billing.</p>
       </div>
 
-      <PlanSelection />
+      <PlanSelection handleClick={handleClick} />
       <SwitchSection />
 
       <div className="buttons-container">

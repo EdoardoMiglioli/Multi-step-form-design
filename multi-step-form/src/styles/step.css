@@ -67,7 +67,7 @@
 
 .plan-cards {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 
@@ -77,6 +77,15 @@
   border: 1px solid var(--border-color);
   border-radius: 10px;
   font-family: var(--font-family);
+}
+
+.plan-card:hover {
+  border-color: var(--active-input-color);
+}
+
+.selected-plan-card {
+  background: ghostwhite;
+  border-color: var(--active-input-color);
 }
 
 .plan-card-icon {

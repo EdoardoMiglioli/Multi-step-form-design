@@ -5,8 +5,7 @@ import TotalSection from '../StepsComponents/Step4/TotalSection';
 import BackButton from '../Buttons/BackBotton';
 import ConfirmButton from '../Buttons/ConfirmButton';
 
-function Step4({ formData, handleChange, onPrev }) {
-  const { name, email } = formData;
+function Step4({ formData, onPrev }) {
 
   const handlePrev = (e) => {
     e.preventDefault();
@@ -19,6 +18,8 @@ function Step4({ formData, handleChange, onPrev }) {
     onPrev();
   };
 
+  console.log(formData)
+
   return (
     <div className="step step-4">
     <div className="header">
@@ -30,10 +31,10 @@ function Step4({ formData, handleChange, onPrev }) {
         <div className="summary-pricing-container">
           <div className="summary-plan">
             <div className="summary-plan-name-container">
-              <h4 className="summary-plan-name">Arcade (monthly)</h4>
+              <h4 className="summary-plan-name">{formData.plan} (monthly)</h4>
               <p className="summary-plan-change">Change</p>
             </div>
-            <h3 className="summary-plan-price">$9/mo</h3>
+            <h3 className="summary-plan-price">{formData.planPrice}</h3>
           </div>
   
           <div className="addons-summary-container">

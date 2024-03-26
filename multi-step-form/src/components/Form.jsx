@@ -13,6 +13,7 @@ const Form = () => {
         email: "",
         phone: "",
         plan: "",
+        planPrice: null,
         isMonthly: true,
         isYearly: false,
         isOnlineService: false,
@@ -29,10 +30,10 @@ const Form = () => {
     };
 
     const handleClick = (fieldName, value) => {
-      setFormData({
-        ...formData,
+      setFormData(prevValues => ({
+        ...prevValues,
         [fieldName]: value
-      });
+      }));
     };
 
     const handleNext = () => {
@@ -76,7 +77,6 @@ const Form = () => {
             {currentStep === 4 && (
               <Step4
                 formData={formData}
-                handleChange={handleChange}
                 onPrev={handlePrev}
               />
             )}

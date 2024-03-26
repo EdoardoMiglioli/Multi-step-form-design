@@ -4,9 +4,9 @@ import PlanCard from './PlanCard';
 
 const PlanSelection = ({ handleClick }) => {
   const [selectedPlan, setSelectedPlan] = useState(null);
-  const handlePlanSelection = (planName) => {
+  const handlePlanSelection = (planName, planPrice) => {
     handleClick("plan", planName);
-    setSelectedPlan(planName);
+    handleClick("planPrice", planPrice);
   }
 
   return (

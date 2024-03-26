@@ -30,7 +30,8 @@
 
 .selected-step-list-element-number {
     background-color: var(--selected-step-color);
-    color: hsl(213, 96%, 18%);
+    color: var(--title-color);
+    border-color: var(--selected-step-color);
 }
 
 .step-list-element-infos {

@@ -3,12 +3,13 @@ import AddOnCard from '../StepsComponents/Step3/AddOnCard';
 import NextButton from '../Buttons/NextButton';
 import BackButton from '../Buttons/BackBotton';
 
-function Step3({ formData, handleChange, onNext, onPrev }) {
+function Step3({ formData, handleClick, onNext, onPrev }) {
   const { isMonthly, isYearly } = formData;
   const addOnsArray = [
     {
       id: 1,
       name: "Online service",
+      formDataKey: "onlineService",
       description: "Access to multiplayer games",
       monthlyPrice: "$1/mo",
       yearlyPrice: "$10/yr",
@@ -17,6 +18,7 @@ function Step3({ formData, handleChange, onNext, onPrev }) {
     {
       id: 2,
       name: "Larger storage",
+      formDataKey: "largerStorage",
       description: "Extra 1TB of cloud save",
       monthlyPrice: "$2/mo",
       yearlyPrice: "$20/yr",
@@ -25,11 +27,12 @@ function Step3({ formData, handleChange, onNext, onPrev }) {
     {
       id: 3,
       name: "Customizable profile",
+      formDataKey: "customizableProfile",
       description: "Custom theme on your profile",
       monthlyPrice: "$2/mo",
       yearlyPrice: "$20/yr",
     }
-  ]
+  ];
 
   const handleNext = (e) => {
     e.preventDefault();
@@ -62,11 +65,11 @@ function Step3({ formData, handleChange, onNext, onPrev }) {
 
       <div className="addons-container">
         {addOnsArray.map(addOn => <AddOnCard 
-        
           key={addOn.id} id={addOn.id} 
           name={addOn.name} description={addOn.description} 
+          formDataKey={addOn.formDataKey}
           price={isMonthly ? addOn.monthlyPrice : addOn.yearlyPrice} 
-  
+          handleClick={handleClick}
         />)}
       </div>
 

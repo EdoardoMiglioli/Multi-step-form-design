@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
-const AddOnCard = ({ name, description, price}) => {
+const AddOnCard = ({ name, description, formDataKey, price, handleClick }) => {
+    const [isSelected, setIsSelected] = useState(false)
+    const addonCardClasses = isSelected ? "selected-addon-card-container addon-card-container" : "addon-card-container";
+
+
+    const handleSelection = () => {
+        handleClick(formDataKey, !isSelected);
+        setIsSelected(!isSelected);
+    }
     return (
-        <div className="addon-card-container">
+        <div className={addonCardClasses} onClick={handleSelection}>
             <label className="checkbox-container">
                 <input
                     className="checkbox-input" 
                     type="checkbox"
+                    checked={isSelected}
                 />
                 <span className="checkbox-custom"></span>
             </label>

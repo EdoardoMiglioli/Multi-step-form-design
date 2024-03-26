@@ -16,7 +16,7 @@ const Form = () => {
         planPrice: null,
         isMonthly: true,
         isYearly: false,
-        isOnlineService: false,
+        onlineService: false,
         largerStorage: false,
         customizableProfile: false,
     });
@@ -68,7 +68,7 @@ const Form = () => {
             {currentStep === 3 && (
               <Step3
                 formData={formData}
-                handleChange={handleChange}
+                handleClick={handleClick}
                 onNext={handleNext}
                 onPrev={handlePrev}
               />

@@ -7,6 +7,7 @@ const PlanSelection = ({ handleClick }) => {
   const handlePlanSelection = (planName, planPrice) => {
     handleClick("plan", planName);
     handleClick("planPrice", planPrice);
+    setSelectedPlan(planName);
   }
 
   return (

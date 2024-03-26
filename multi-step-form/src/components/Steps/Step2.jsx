@@ -4,7 +4,7 @@ import SwitchSection from '../StepsComponents/Step2/SwitchSection';
 import NextButton from '../Buttons/NextButton';
 import BackButton from '../Buttons/BackBotton';
 
-function Step2({ plan, onNext, onPrev, handleClick }) {
+function Step2({ plan, isMonthly, onNext, onPrev, toggleIsMonthly, handleClick }) {
 
   const handleNext = (e) => {
     e.preventDefault();
@@ -37,7 +37,7 @@ function Step2({ plan, onNext, onPrev, handleClick }) {
       </div>
 
       <PlanSelection plan={plan} handleClick={handleClick} />
-      <SwitchSection />
+      <SwitchSection isMonthly={isMonthly} toggleIsMonthly={toggleIsMonthly} />
 
       <div className="buttons-container">
         <BackButton handlePrev={handlePrev} />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Sidebar from "./Sidebar/Sidebar";
 import Step1 from "./Steps/Step1";
@@ -8,18 +8,25 @@ import Step4 from "./Steps/Step4";
 
 const Form = () => {
     const [currentStep, setCurrentStep] = useState(1);
+    const [isMonthly, setIsMonthly] = useState(true);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         phone: "",
         plan: "",
         planPrice: null,
-        isMonthly: true,
-        isYearly: false,
+        isMonthly: isMonthly,
         onlineService: false,
         largerStorage: false,
         customizableProfile: false,
     });
+
+    useEffect(() => {
+      setFormData(prevFormData => ({
+          ...prevFormData,
+          isMonthly: isMonthly  
+      }));
+  }, [isMonthly]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -35,6 +42,10 @@ const Form = () => {
         [fieldName]: value
       }));
     };
+
+    const toggleIsMonthly = () => {
+      setIsMonthly(!isMonthly);
+    }
 
     const handleNext = () => {
       setCurrentStep(currentStep + 1);
@@ -59,6 +70,8 @@ const Form = () => {
             {currentStep === 2 && (
               <Step2
                 plan={formData.plan}
+                isMonthly={formData.isMonthly}
+                toggleIsMonthly={toggleIsMonthly}
                 handleClick={handleClick}
                 onNext={handleNext}
                 onPrev={handlePrev}

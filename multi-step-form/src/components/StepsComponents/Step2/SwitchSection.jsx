@@ -12,7 +12,7 @@ const SwitchSection = ({ isMonthly, toggleIsMonthly }) => {
         <div className="switch-section-container">
             <p className={isChecked ? "selected-switch-section-text" : "switch-section-text" }>Monthly</p>
             <label className="switch">
-                <input type="checkbox" checked={!isChecked} onChange={handleSwitchChange}/>
+                <input type="checkbox" checked={!isChecked} onChange={handleSwitchChange} name="checkbox" />
                 <span className="slider round"></span>
             </label>
             <p className={!isChecked ? "selected-switch-section-text" : "switch-section-text" }>Yearly</p>

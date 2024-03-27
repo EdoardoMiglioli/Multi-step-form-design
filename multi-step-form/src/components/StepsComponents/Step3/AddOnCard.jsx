@@ -15,6 +15,7 @@ const AddOnCard = ({ name, description, formDataKey, isAddonSelected, price, han
                 <input
                     className="checkbox-input" 
                     type="checkbox"
+                    name="checkbox"
                     onChange={() => {}}
                     checked={isSelected}
                     disabled={true}

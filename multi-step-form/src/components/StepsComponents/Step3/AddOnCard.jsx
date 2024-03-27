@@ -16,6 +16,7 @@ const AddOnCard = ({ name, description, formDataKey, isAddonSelected, price, han
                     className="checkbox-input" 
                     type="checkbox"
                     name="checkbox"
+                    aria-describedby={`checkbox to get ${name} addon`}
                     onChange={() => {}}
                     checked={isSelected}
                     disabled={true}

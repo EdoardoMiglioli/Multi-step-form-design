@@ -36,6 +36,7 @@ function Step1({ formData, handleChange, onNext }) {
             type="text"
             autoComplete="name"
             name="name"
+            aria-describedby="name input"
           />
         </div>
   
@@ -53,6 +54,7 @@ function Step1({ formData, handleChange, onNext }) {
             type="email"
             autoComplete="email"
             name="email"
+            aria-describedby="email input"
           />
         </div>
         
@@ -70,6 +72,7 @@ function Step1({ formData, handleChange, onNext }) {
             type="tel"
             autoComplete="tel"
             name="phone"
+            aria-describedby="phone number input"
           />
         </div>
       </div>

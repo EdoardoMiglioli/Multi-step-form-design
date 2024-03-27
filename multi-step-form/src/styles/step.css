@@ -386,3 +386,9 @@ input:checked + .slider:before {
   color: var(--primary-color);
   font-size: 23px;
 }
+
+@media screen and (max-width: 768px) {
+  .step {
+    margin: 0;
+  }
+}

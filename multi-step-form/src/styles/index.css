@@ -45,6 +45,7 @@ body {
     padding: 15px 22.5px;
     border-radius: 10px;
     background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* removing standard stylings */
@@ -63,4 +64,10 @@ input[type="checkout"] {
     cursor: pointer;
     height: 0;
     width: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .form-container {
+        width: 100%;
+    }
 }

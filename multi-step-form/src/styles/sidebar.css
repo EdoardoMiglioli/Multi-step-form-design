@@ -49,3 +49,21 @@
     margin: 0;
 }
 
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: flex;
+        height: 30vh;
+        align-items: flex-start;
+        justify-content: center;
+        border-radius: 0px;
+        background-image: url('../../public/assets/images/bg-sidebar-mobile.svg');
+        background-size: cover;
+    }
+
+    .step-list-element {
+        display: flex;
+        margin: 60px 15px;
+        z-index: 1;
+    }
+}

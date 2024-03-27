@@ -387,8 +387,9 @@ input:checked + .slider:before {
   font-size: 23px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .step {
     margin: 0;
+    gap: 0;
   }
 }

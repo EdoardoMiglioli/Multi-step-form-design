@@ -5,6 +5,7 @@ import Step1 from "./Steps/Step1";
 import Step2 from "./Steps/Step2";
 import Step3 from "./Steps/Step3";
 import Step4 from "./Steps/Step4";
+import ButtonsSection from "./Buttons/ButtonsSection";
 
 const Form = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -71,9 +72,9 @@ const Form = () => {
 
   return (
     <div className="form-container">
-      {(windowWidth <= 768) && <Sidebar currentStep={currentStep} isDekstop={false} />}
+      {(windowWidth <= 1024) && <Sidebar currentStep={currentStep} isDekstop={false} />}
       <div className="form">
-          {(windowWidth > 768) && <Sidebar currentStep={currentStep} isDekstop={true} />}
+          {(windowWidth > 1024) && <Sidebar currentStep={currentStep} isDekstop={true} />}
           {currentStep === 1 && (
             <Step1
               formData={formData}
@@ -110,6 +111,9 @@ const Form = () => {
             />
           )}
       </div>
+
+      {(windowWidth <= 1024) && <ButtonsSection currentStep={currentStep} handleNext={handleNext} handlePrev={handlePrev} />}
+
     </div>
   );
 }

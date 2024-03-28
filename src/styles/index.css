@@ -45,7 +45,7 @@ body {
     gap: 15px;
     justify-content: center;
     height: 70vh;
-    width: 70%;
+    width: 60%;
     padding: 15px 22.5px;
     border-radius: 10px;
     background: #fff;
@@ -80,6 +80,7 @@ input[type="checkout"] {
         grid-template-columns: 1fr;
         height: fit-content;
         padding: 20px 30px;
+        width: 75%;
         position: fixed;
         top: 0;
         left: 0;

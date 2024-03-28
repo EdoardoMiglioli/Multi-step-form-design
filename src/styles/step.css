@@ -10,6 +10,7 @@
 }
 
 .title {
+  margin-top: 0;
   margin-bottom: 10px;
   color: var(--title-color);
   font-size: 32px;
@@ -17,11 +18,17 @@
 }
 
 .subtitle {
-  margin-top: 0;
+  margin: 0;
   color: var(--secondary-text-color);
 }
 
 /* Step 1 */
+
+.step-1 {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 30px;
+}
 
 .inputs-container {
   display: grid;
@@ -46,7 +53,7 @@
 .input-label {
   color: var(--text-color);
   font-size: 15px;
-  font-weight: var(--medium-font);
+  font-weight: var(--light-font);
 }
 
 .error {
@@ -87,7 +94,10 @@
 }
 
 .plan-card {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
   padding: 15px;
   border: 1px solid var(--border-color);
   border-radius: 10px;
@@ -112,6 +122,7 @@
 .plan-card-title {
   margin: 0;
   color: var(--text-color);
+  font-weight: var(--medium-font);
 }
 
 .plan-card-price {
@@ -140,7 +151,7 @@
   width: 100%;
   height: 60px;
   border-radius: 10px;
-  margin: 0 auto;
+  margin-bottom: 40px;
   background-color: ghostwhite;
   font-family: var(--font-family);
 }
@@ -204,6 +215,7 @@ input:checked + .slider:before {
   display: grid;
   grid-template-rows: auto auto auto;
   gap: 20px;
+  margin-bottom: 40px;
 }
 
 .addon-card-container {
@@ -437,6 +449,7 @@ input:checked + .slider:before {
   }
 
   .plan-card {
+    display: grid;
     grid-template-columns: auto 1fr;
     gap: 20px;
     align-items: center;
@@ -453,6 +466,10 @@ input:checked + .slider:before {
   }
 
   .plan-card-price {
+    margin: 0;
+  }
+
+  .switch-section-container {
     margin: 0;
   }
 

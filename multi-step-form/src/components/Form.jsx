@@ -12,6 +12,7 @@ const Form = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [currentStep, setCurrentStep] = useState(1);
   const [isMonthly, setIsMonthly] = useState(true);
+  const [displayErrorStep1, setDisplayErrorStep1] = useState(false)
   const [formData, setFormData] = useState({
       name: "",
       email: "",
@@ -79,6 +80,8 @@ const Form = () => {
           {currentStep === 1 && (
             <Step1
               formData={formData}
+              displayErrorStep1={displayErrorStep1}
+              setDisplayErrorStep1={setDisplayErrorStep1}
               handleChange={handleChange}
               onNext={handleNext}
             />
@@ -118,7 +121,7 @@ const Form = () => {
           )}
       </div>
 
-      {(windowWidth <= 1024) && <ButtonsSection currentStep={currentStep} handleNext={handleNext} handlePrev={handlePrev} />}
+      {(windowWidth <= 1024) && <ButtonsSection formData={formData} setDisplayErrorStep1={setDisplayErrorStep1} currentStep={currentStep} handleNext={handleNext} handlePrev={handlePrev} />}
 
     </div>
   );

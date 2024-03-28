@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import NextButton from '../Buttons/NextButton';
 
-function Step1({ formData, handleChange, onNext }) {
-  const [displayError, setDisplayError] = useState(false);
+function Step1({ displayErrorStep1, setDisplayErrorStep1, formData, handleChange, onNext }) {
   const { name, email, phone } = formData;
 
   const handleNext = (e) => {
     e.preventDefault();
     if (!name || !email || !phone) {
-      setDisplayError(true);
+      setDisplayErrorStep1(true);
       return
     }
     onNext();
@@ -25,11 +24,11 @@ function Step1({ formData, handleChange, onNext }) {
         <div className="input-container">
           <div className="input-texts-container">
             <label className="input-label" htmlFor="nameInput">Name</label>
-            {displayError && !name && <p className="error">This field is required</p>}
+            {displayErrorStep1 && !name && <p className="error">This field is required</p>}
           </div>
           <input
             id="nameInput"
-            className={(displayError && !email) ? "error-text-input text-input" : "text-input"}
+            className={(displayErrorStep1 && !email) ? "error-text-input text-input" : "text-input"}
             value={name}
             onChange={handleChange}
             placeholder="e.g. Stephen King"
@@ -43,11 +42,11 @@ function Step1({ formData, handleChange, onNext }) {
         <div className="input-container">
           <div className="input-texts-container">
             <label className="input-label" htmlFor="emailInput">Email address</label>
-            {displayError && !email && <p className="error">This field is required</p>}
+            {displayErrorStep1 && !email && <p className="error">This field is required</p>}
           </div>
           <input
             id="emailInput"
-            className={(displayError && !email) ? "error-text-input text-input" : "text-input"}
+            className={(displayErrorStep1 && !email) ? "error-text-input text-input" : "text-input"}
             value={email}
             onChange={handleChange}
             placeholder="e.g. stephenking@lorem.com"
@@ -61,11 +60,11 @@ function Step1({ formData, handleChange, onNext }) {
         <div className="input-container">
           <div className="input-texts-container">
             <label className="input-label" htmlFor="phoneInput">Phone number</label>
-            {displayError && !phone && <p className="error">This field is required</p>}
+            {displayErrorStep1 && !phone && <p className="error">This field is required</p>}
           </div>
           <input
             id="phoneInput"
-            className={(displayError && !email) ? "error-text-input text-input" : "text-input"}
+            className={(displayErrorStep1 && !email) ? "error-text-input text-input" : "text-input"}
             value={phone}
             onChange={handleChange}
             placeholder="e.g. +1 234 567 890"

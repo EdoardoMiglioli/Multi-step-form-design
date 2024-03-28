@@ -432,4 +432,8 @@ input:checked + .slider:before {
   .addons-container {
     margin: 20px 0;
   }
+
+  .summary {
+    margin: 20px 0;
+  }
 }

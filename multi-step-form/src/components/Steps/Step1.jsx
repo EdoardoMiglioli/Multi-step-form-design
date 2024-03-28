@@ -76,6 +76,10 @@ function Step1({ formData, handleChange, onNext }) {
           />
         </div>
       </div>
+
+      <div className="buttons-container">
+        <NextButton handleNext={handleNext} />
+      </div>
     </div>
   );
 }

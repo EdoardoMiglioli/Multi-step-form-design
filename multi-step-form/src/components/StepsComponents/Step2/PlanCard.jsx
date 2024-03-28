@@ -11,6 +11,7 @@ const PlanCard = ({ title, isMonthly, monthlyPrice, yearlyPrice, imageName, hand
       <div className="plan-card-infos">
         <h3 className="plan-card-title">{title}</h3>
         <p className="plan-card-price">Price: {isMonthly ? monthlyPrice : yearlyPrice}</p>
+        {!isMonthly && <h5 className="plan-card-months-free">2 months free</h5>}
       </div>
     </div>
   );

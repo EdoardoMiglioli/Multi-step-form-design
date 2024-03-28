@@ -106,7 +106,7 @@
 
 .plan-card-icon {
   height: 50px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .plan-card-title {
@@ -115,8 +115,14 @@
 }
 
 .plan-card-price {
-  margin: 0;
+  margin: 10px 0;
   color: var(--secondary-text-color);
+}
+
+.plan-card-months-free {
+  margin: 0;
+  color: var(--text-color);
+  font-weight: var(--light-font);
 }
 
 .switch-section-text {
@@ -429,11 +435,21 @@ input:checked + .slider:before {
     gap: 5px;
   }
 
+  .plan-card-price {
+    margin: 0;
+  }
+
   .addons-container {
     margin: 20px 0;
   }
 
   .summary {
     margin: 20px 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .plan-card-icon {
+    margin-bottom: 40px;
   }
 }

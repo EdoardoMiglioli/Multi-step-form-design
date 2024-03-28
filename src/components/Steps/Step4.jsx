@@ -63,11 +63,11 @@ function Step4({ formData, isMonthly, onNext, onPrev }) {
   }
 
   return (
-    <div className="step step-4">
-    <div className="header">
-        <h2 className="title">Finishing up</h2>
+    <section className="step step-4">
+      <header className="header">
+        <h1 className="title">Finishing up</h1>
         <p className="subtitle">Double-check everything looks OK before confirming.</p>
-      </div>
+      </header>
 
       <div className="summary">
         <div className="summary-pricing-container">
@@ -92,7 +92,7 @@ function Step4({ formData, isMonthly, onNext, onPrev }) {
         <BackButton handlePrev={handlePrev} />
         <ConfirmButton handleNext={handleNext}/>
       </div>
-    </div>
+    </section>
   );
 }
 

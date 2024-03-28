@@ -60,11 +60,11 @@ function Step3({ formData, handleClick, onNext, onPrev }) {
   };
 
   return (
-    <div className="step step-3">
-      <div className="header">
-        <h2 className="title">Pick add-ons</h2>
+    <section className="step step-3">
+      <header className="header">
+        <h1 className="title">Pick add-ons</h1>
         <p className="subtitle">Add-ons help enhance your gaming experience.</p>
-      </div>
+      </header>
 
       <div className="addons-container">
         {addOnsArray.map(addOn => <AddOnCard 
@@ -81,7 +81,7 @@ function Step3({ formData, handleClick, onNext, onPrev }) {
         <BackButton handlePrev={handlePrev} />
         <NextButton handleNext={handleNext} />
       </div>
-    </div>
+    </section>
   );
 }
 

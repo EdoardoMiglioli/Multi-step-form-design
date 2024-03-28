@@ -22,7 +22,7 @@
 
 body {
     margin: 0;
-    background: ghostwhite;
+    background: hsl(217, 100%, 97%);
 }
 
 .App {
@@ -45,7 +45,7 @@ body {
     gap: 15px;
     justify-content: center;
     height: 70vh;
-    width: 65%;
+    width: 70%;
     padding: 15px 22.5px;
     border-radius: 10px;
     background: #fff;

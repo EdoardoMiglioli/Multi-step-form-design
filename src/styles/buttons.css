@@ -20,6 +20,7 @@ button:hover {
     color: #fff;
     background-color: var(--next-button-color);
     border-radius: 10px;
+    font-weight: var(--medium-font);
 }
 
 .next-button:hover {
@@ -33,6 +34,7 @@ button:hover {
     color: #fff;
     background-color: var(--primary-color);
     border-radius: 10px;
+    font-weight: var(--medium-font);
 }
 
 .confirm-button:hover {
@@ -44,6 +46,7 @@ button:hover {
     padding: 0;
     color: var(--back-button-color);
     background-color: transparent;
+    font-weight: var(--medium-font);
 }
 
 .back-button:hover {

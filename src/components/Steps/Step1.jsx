@@ -4,6 +4,7 @@ import NextButton from '../Buttons/NextButton';
 function Step1({ displayErrorStep1, setDisplayErrorStep1, formData, handleChange, onNext }) {
   const { name, email, phone } = formData;
   const [isValidEmail, setIsValidEmail] = useState(true);
+  const [isValidPhone, setIsValidPhone] = useState(true);
 
   useEffect(() => {
     const validateEmail = (email) => {
@@ -13,6 +14,15 @@ function Step1({ displayErrorStep1, setDisplayErrorStep1, formData, handleChange
 
     setIsValidEmail(validateEmail(email));
   }, [email]);
+
+  useEffect(() => {
+    const validatePhone = (phone) => {
+      const phoneRegex = /^\d{10}$/;
+      return phoneRegex.test(phone);
+    }
+
+    setIsValidPhone(validatePhone(phone));
+  }, [phone]);
 
   const handleNext = (e) => {
     e.preventDefault();
@@ -24,11 +34,11 @@ function Step1({ displayErrorStep1, setDisplayErrorStep1, formData, handleChange
   };
 
   return (
-    <div className="step step-1">
-      <div className="header">
-        <h2 className="title">Personal info</h2>
+    <section className="step step-1">
+      <header className="header">
+        <h1 className="title">Personal info</h1>
         <p className="subtitle">Please provide your name, email address and phone number</p>
-      </div>
+      </header>
 
       <div className="inputs-container">
         <div className="input-container">
@@ -45,7 +55,6 @@ function Step1({ displayErrorStep1, setDisplayErrorStep1, formData, handleChange
             type="text"
             autoComplete="name"
             name="name"
-            aria-describedby="name input"
           />
         </div>
   
@@ -64,7 +73,6 @@ function Step1({ displayErrorStep1, setDisplayErrorStep1, formData, handleChange
             type="email"
             autoComplete="email"
             name="email"
-            aria-describedby="email input"
           />
         </div>
         
@@ -72,17 +80,17 @@ function Step1({ displayErrorStep1, setDisplayErrorStep1, formData, handleChange
           <div className="input-texts-container">
             <label className="input-label" htmlFor="phoneInput">Phone number</label>
             {displayErrorStep1 && !phone && <p className="error">This field is required</p>}
+            {!isValidPhone && phone && <p className="error">Phone number isn't valid</p>}
           </div>
           <input
             id="phoneInput"
-            className={(displayErrorStep1 && !email) ? "error-text-input text-input" : "text-input"}
+            className={(displayErrorStep1 && !isValidPhone && !phone) ? "error-text-input text-input" : "text-input"}
             value={phone}
             onChange={handleChange}
             placeholder="e.g. +1 234 567 890"
             type="tel"
             autoComplete="tel"
             name="phone"
-            aria-describedby="phone number input"
           />
         </div>
       </div>
@@ -90,7 +98,7 @@ function Step1({ displayErrorStep1, setDisplayErrorStep1, formData, handleChange
       <div className="buttons-container">
         <NextButton handleNext={handleNext} />
       </div>
-    </div>
+    </section>
   );
 }
 

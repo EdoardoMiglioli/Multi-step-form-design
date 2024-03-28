@@ -393,6 +393,10 @@ input:checked + .slider:before {
     gap: 0;
   }
 
+  .title {
+    margin-top: 20px;
+  }
+
   .subtitle {
     margin: 0;
   }
@@ -423,5 +427,9 @@ input:checked + .slider:before {
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 5px;
+  }
+
+  .addons-container {
+    margin: 20px 0;
   }
 }

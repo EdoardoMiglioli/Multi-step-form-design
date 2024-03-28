@@ -5,7 +5,18 @@ import TotalSection from '../StepsComponents/Step4/TotalSection';
 import BackButton from '../Buttons/BackBotton';
 import ConfirmButton from '../Buttons/ConfirmButton';
 
-function Step4({ formData, isMonthly, onPrev }) {
+function Step4({ formData, isMonthly, onNext, onPrev }) {
+
+  const handleNext = (e) => {
+    e.preventDefault();
+    // Add validation logic here
+    // For example:
+    // if (!name || !email) {
+    //   // Display error message
+    //   return;
+    // }
+    onNext();
+  };
 
   const handlePrev = (e) => {
     e.preventDefault();
@@ -79,7 +90,7 @@ function Step4({ formData, isMonthly, onPrev }) {
 
       <div className="buttons-container">
         <BackButton handlePrev={handlePrev} />
-        <ConfirmButton />
+        <ConfirmButton handleNext={handleNext}/>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
 import React from "react";
 
-const ConfirmButton = ({ }) => {
+const ConfirmButton = ({ handleNext }) => {
     return (
-        <button className="confirm-button">Confirm</button>
+        <button className="confirm-button" onClick={handleNext}>Confirm</button>
     );
 }
 

@@ -5,6 +5,7 @@ import Step1 from "./Steps/Step1";
 import Step2 from "./Steps/Step2";
 import Step3 from "./Steps/Step3";
 import Step4 from "./Steps/Step4";
+import Step5 from "./Steps/Step5";
 import ButtonsSection from "./Buttons/ButtonsSection";
 
 const Form = () => {
@@ -107,8 +108,13 @@ const Form = () => {
             <Step4
               formData={formData}
               isMonthly={formData.isMonthly}
+              onNext={handleNext}
               onPrev={handlePrev}
             />
+          )}
+
+          {currentStep === 5 && (
+            <Step5 />
           )}
       </div>
 

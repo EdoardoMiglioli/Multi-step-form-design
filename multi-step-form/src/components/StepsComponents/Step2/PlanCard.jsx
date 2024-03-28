@@ -8,8 +8,10 @@ const PlanCard = ({ title, isMonthly, monthlyPrice, yearlyPrice, imageName, hand
   return (
     <div className={planCardClasses} name="plan" aria-describedby={ariaDescribedby} onClick={() => handlePlanSelection(title, monthlyPrice, yearlyPrice)} >
       <img className="plan-card-icon" src={imgPath} />
-      <h3 className="plan-card-title">{title}</h3>
-      <p className="plan-card-price">Price: {isMonthly ? monthlyPrice : yearlyPrice}</p>
+      <div className="plan-card-infos">
+        <h3 className="plan-card-title">{title}</h3>
+        <p className="plan-card-price">Price: {isMonthly ? monthlyPrice : yearlyPrice}</p>
+      </div>
     </div>
   );
 };

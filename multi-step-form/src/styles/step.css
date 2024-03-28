@@ -393,7 +393,35 @@ input:checked + .slider:before {
     gap: 0;
   }
 
+  .subtitle {
+    margin: 0;
+  }
+
   .inputs-container {
-    margin-bottom: 20px;
+    margin: 20px 0;
+  }
+
+  .plan-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .plan-card {
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .plan-card-icon {
+    margin-bottom: 0;
+  }
+
+  .plan-card-infos {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
   }
 }

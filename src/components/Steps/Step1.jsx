@@ -1,8 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NextButton from '../Buttons/NextButton';
 
 function Step1({ displayErrorStep1, setDisplayErrorStep1, formData, handleChange, onNext }) {
   const { name, email, phone } = formData;
+  const [isValidEmail, setIsValidEmail] = useState(true);
+
+  useEffect(() => {
+    const validateEmail = (email) => {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    };
+
+    setIsValidEmail(validateEmail(email));
+  }, [email]);
 
   const handleNext = (e) => {
     e.preventDefault();
@@ -28,7 +38,7 @@ function Step1({ displayErrorStep1, setDisplayErrorStep1, formData, handleChange
           </div>
           <input
             id="nameInput"
-            className={(displayErrorStep1 && !email) ? "error-text-input text-input" : "text-input"}
+            className={(displayErrorStep1 && !name) ? "error-text-input text-input" : "text-input"}
             value={name}
             onChange={handleChange}
             placeholder="e.g. Stephen King"
@@ -43,10 +53,11 @@ function Step1({ displayErrorStep1, setDisplayErrorStep1, formData, handleChange
           <div className="input-texts-container">
             <label className="input-label" htmlFor="emailInput">Email address</label>
             {displayErrorStep1 && !email && <p className="error">This field is required</p>}
+            {!isValidEmail && email && <p className="error">Mail isn't spelled well</p>}
           </div>
           <input
             id="emailInput"
-            className={(displayErrorStep1 && !email) ? "error-text-input text-input" : "text-input"}
+            className={(displayErrorStep1 && !isValidEmail && !email) ? "error-text-input text-input" : "text-input"}
             value={email}
             onChange={handleChange}
             placeholder="e.g. stephenking@lorem.com"
